@@ -1,71 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reskoldo | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis de Carlos | Portfolio</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation Menu -->
-  <nav class="navbar">
-    <div class="logo">Reskoldo73</div>
-    <button class="menu-toggle" id="menuToggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li>
-        <!-- Theme toggle switch -->
-        <label class="switch">
-          <input type="checkbox" id="themeToggle">
-          <span class="slider"></span>
-        </label>
-      </li>
-    </ul>
-  </nav>
 
-  <!-- Header -->
-  <header>
-    <h1>Hi, I’m Luis de Carlos</h1>
-    <p>Mathematics & Computer Engineering Student at CFIS-UPC</p>
-  </header>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#home">
+                    <span style="font-family: 'Times New Roman', serif; font-style: italic;">∫</span> Reskoldo
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                
+                <li class="dropdown">
+                    <a href="#projects" class="dropbtn">Projects <i class="fas fa-chevron-down" style="font-size: 0.7em; margin-left: 5px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#projects">C++ Development</a>
+                        <a href="#projects">Scientific Computing</a>
+                    </div>
+                </li>
+                
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-  <!-- Main Sections -->
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I’m passionate about programming, problem-solving, and technology.  
-        Currently studying Computer Engineering and Mathematics, building projects in C/C++, Python, and learning web development.
-      </p>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round">
+                        <i class="fas fa-sun sun-icon"></i>
+                        <i class="fas fa-moon moon-icon"></i>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <span class="badge">Math & Informatics @ CFIS-UPC</span>
+            <h1>Hi, I'm Luis de Carlos.</h1>
+            <h3>I build <span class="gradient-text" id="typewriter"></span><span class="cursor">|</span></h3>
+            
+            <p style="max-width: 600px; margin: 1rem auto; color: var(--text-muted);">
+                Mathematics and Informatics Engineering student passionate about algorithms and software architecture. 
+                I apply mathematical rigor to code.
+            </p>
+            
+            <div class="cta-group">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+            
+            <div class="social-icons">
+                <a href="https://github.com/reskoldo73" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/luis-de-carlos" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section" style="background-color: var(--bg-card);">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem;">About Me</h2>
+                    <p style="margin-bottom: 1rem;">
+                        I am a double-degree student at <strong>CFIS-UPC</strong> (Barcelona Tech). 
+                        I enjoy tackling complex problems and learning autonomously.
+                    </p>
+                    <p>
+                        My main strength lies in <strong>low-level systems</strong> (C++) and <strong>algorithmic logic</strong>. 
+                        I also use Python for mathematical modelling and prototyping.
+                    </p>
+                    
+                    <div style="margin-top: 2rem;">
+                        <h4 style="margin-bottom: 0.5rem; color: var(--primary);">Languages</h4>
+                        <ul style="list-style: circle; margin-left: 1.5rem;">
+                            <li><strong>English:</strong> C2 (Proficiency CPE)</li>
+                            <li><strong>German:</strong> Intermediate (~B1)</li>
+                            <li><strong>Spanish & Catalan:</strong> Native</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="about-skills">
+                    <h3 style="margin-bottom: 1.5rem;">Tech Stack</h3>
+                    <div class="skill-tags">
+                        <span class="mono">C++ / C</span>
+                        <span class="mono">Python (NumPy)</span>
+                        <span class="mono">Java</span>
+                        <span class="mono">Git & Bash</span>
+                        <span class="mono">Arch Linux</span>
+                        <span class="mono">LaTeX</span>
+                        <span class="mono">HTML5 / CSS3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>GitHub Portfolio:</strong> <a href="https://github.com/reskoldo73" target="_blank">My GitHub</a></li>
-        <li><strong>Personal Website:</strong> This portfolio hosted with GitHub Pages</li>
-      </ul>
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Selected Works</h2>
+            <div class="grid-container" id="project-container"></div>
+        </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:reskoldo73@gmail.com">reskoldo73@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/luis-de-carlos/" target="_blank">linkedin.com/in/luis-de-carlos/</a></p>
+    <section id="contact" class="section" style="background-color: var(--bg-card);">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">Get In Touch</h2>
+            <p style="margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                I am currently open to internship opportunities, as well as software, hardware, or Linux engineering roles.
+            </p>
+            <a href="mailto:reskoldo73@gmail.com" class="btn btn-primary" style="font-size: 1.2rem;">
+                <i class="fas fa-envelope"></i> reskoldo73@gmail.com
+            </a>
+            
+            <div class="social-icons" style="margin-top: 3rem;">
+                <a href="https://github.com/reskoldo73" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/luis-de-carlos" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 reskoldo73 | Built to learn some HTML, CSS & JS</p>
-  </footer>
+    <footer>
+        <p>&copy; 2025 Luis de Carlos. Built to learn.</p>
+    </footer>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
